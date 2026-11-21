@@ -1,5 +1,6 @@
 package com.Secutity.SpringSecurity.Entity;
 
+import com.Secutity.SpringSecurity.Enum.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,4 +26,7 @@ public class UserEntity {
     private String password;
     @Column(name = "isActive")
     private Boolean isActive;
+    @Column(name = "role")
+    @Enumerated(EnumType.STRING)
+    private Role role;
 }
